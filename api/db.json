@@ -125,6 +125,35 @@
       "city": "Valahol",
       "salary": 300,
       "id": 21
+    },
+    {
+      "name": "névtelen",
+      "city": "bbb",
+      "salary": {},
+      "id": 22
+    },
+    {
+      "name": "névtelen",
+      "city": "33",
+      "salary": "33",
+      "id": 23
+    },
+    {
+      "name": "névtelen",
+      "city": "",
+      "salary": "",
+      "id": 24
+    },
+    {
+      "city": "asdf",
+      "salary": "234",
+      "id": 25
+    },
+    {
+      "name": "sdfdf",
+      "city": "adsfdfas",
+      "salary": "234",
+      "id": 26
     }
   ]
 }
