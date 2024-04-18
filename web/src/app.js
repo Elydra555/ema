@@ -9,7 +9,7 @@ const state = {
 
 
 doc.addButton.addEventListener('click', () => {
-    console.log('műkődik')
+    console.log('működik')
     createEmployee()
 })
 
