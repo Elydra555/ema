@@ -11,18 +11,6 @@
       "name": "Erős István",
       "city": "Szolnok",
       "salary": 327
-    },
-    {
-      "name": "adfs",
-      "city": "afds",
-      "salary": "234",
-      "id": 3
-    },
-    {
-      "name": "",
-      "city": "",
-      "salary": "",
-      "id": 4
     }
   ]
 }
