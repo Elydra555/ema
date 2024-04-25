@@ -15,9 +15,13 @@ const state = {
 
 
 doc.addButton.addEventListener('click', () => {
-    console.log('műkődik')
+    // console.log('műkődik')
     getDataFromForm()
     createEmployee()
+    deleteModalContent()
+    deleteMessage()
+    clearTableContent()
+    getEmployees()
 })
 
 function getDataFromForm() {
@@ -45,6 +49,7 @@ function getEmployees() {
     .then( response => response.json())
     .then(result => {
         // console.log(result)
+        clearTableContent()
         renderEmployees(result)
     })
 }
@@ -65,7 +70,8 @@ function renderEmployees(employeeList) {
                     Szerkesztés
                 </button>
                 <button
-                    class="btn btn-danger">
+                    class="btn btn-danger"
+                    onclick="startDelete(${emp.id})">
                     Törlés
                 </button>
             </td>
@@ -73,6 +79,33 @@ function renderEmployees(employeeList) {
         doc.empBody.appendChild(row)
     });
     
+}
+
+function deleteModalContent(){
+    doc.nameInput.value = ''
+    doc.cityInput.value = ''
+    doc.salaryInput.value = ''
+}
+
+function deleteMessage(){
+    alert('Sikeres')
+}
+
+function clearTableContent(){
+    doc.empBody.textContent = ''
+}
+
+function startDelete(id){
+    console.log('törlendő:', id)
+    deleteEmployee(id)
+    getEmployees()
+}
+
+function deleteEmployee(id){
+    let newUrl = state.url + '/' + id
+    fetch(newUrl, {
+        method: 'delete'
+    })
 }
 
 getEmployees()
